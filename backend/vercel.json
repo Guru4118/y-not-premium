@@ -1,0 +1,41 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "frontend",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "backend/server.js"
+      },
+      {
+        "src": "/uploads/(.*)",
+        "dest": "backend/uploads/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "frontend/$1"
+      }
+    ],
+    "functions": {
+      "backend/server.js": {
+        "includeFiles": [
+          "backend/config/**",
+          "backend/controllers/**",
+          "backend/models/**",
+          "backend/routes/**",
+          "backend/uploads/**",
+          "backend/.env",
+          "backend/package.json",
+          "backend/package-lock.json"
+        ]
+      }
+    }
+  }
