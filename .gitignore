@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Ignore environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs and OS-specific files
+logs/
+*.log
+.DS_Store
+
+# Build files
+/build
+/dist
+/.next
+
+# IDE-specific files
+.vscode/
+.idea/
