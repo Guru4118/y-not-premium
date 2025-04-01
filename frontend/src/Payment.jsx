@@ -23,7 +23,7 @@ const CheckoutForm = () => {
     }
 
     try {
-      const { data } = await axios.post("http://localhost:5000/api/payment/create-payment-intent", {
+      const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/payment/create-payment-intent`, {
         amount: 1000, // Example amount, replace dynamically
       });
 

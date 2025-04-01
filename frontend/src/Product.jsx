@@ -13,7 +13,8 @@ export default function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/products/getallproduct");
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products/getallproduct`);
+
         setProducts(response.data);
         setLoading(false);
       } catch (err) {
