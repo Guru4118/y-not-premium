@@ -16,7 +16,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(``${back_url}/api/users/login`, { email, password });
+      const res = await axios.post(`${back_url}/api/users/login`, { email, password });
       localStorage.setItem("user", JSON.stringify(res.data)); // Save user data
       navigate("/"); // Redirect to homepage or cart page
     } catch (error) {
