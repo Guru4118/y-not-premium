@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: ["*"],
+    origin: "https://y-not-premium-b533.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
