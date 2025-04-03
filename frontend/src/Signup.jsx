@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "./Navbar"; // Import Navbar
 import QuickLinks from "./Quicklinks"; // Import QuickLinks
 import signupImage from "./assets/sign.jpg"; // Replace with your image
+import { back_url } from "../url";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
