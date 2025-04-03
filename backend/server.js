@@ -32,14 +32,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/payment", paymentRoutes);
 
-// Serve React frontend for all non-API routes
-//const __dirname = __dirname || path.resolve();
 
-app.use(express.static(path.join(__dirname, "/frontend/build")));
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/frontend/build", "index.html"));
-});
 
 
 const port = process.env.PORT || 5000;
