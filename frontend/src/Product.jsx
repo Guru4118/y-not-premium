@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import QuickLinks from "./Quicklinks";
+import { back_url } from "../url";
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
@@ -13,7 +14,7 @@ export default function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products/getallproduct`);
+        const response = await axios.get(`${back_url}/api/products/getallproduct`);
 
         setProducts(response.data);
         setLoading(false);

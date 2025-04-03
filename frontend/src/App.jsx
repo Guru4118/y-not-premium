@@ -6,7 +6,7 @@ import LoginPage from "./Login";
 import CartPage from "./Cart.jsx";
 import SignUp from "./Signup";
 import Aboutus from "./About.jsx";
-import ProductList from "./Product.jsx";
+import Product from "./Product.jsx";
 import ContactPage from "./Contact.jsx";
 import Payment from "./Payment.jsx";
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/signup" element={<SignUp/>}></Route>
           <Route path="/about" element={<Aboutus/>}></Route>
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/products" element={<ProductList/>}></Route>
+          <Route path="/products" element={<Product/>}></Route>
           <Route path="/contact" element={<ContactPage/>}>  </Route>
           <Route path="/payment" element={<Payment />} />
         </Routes>
