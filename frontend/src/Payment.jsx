@@ -47,7 +47,7 @@ const CheckoutForm = () => {
 
   return (
     <div className="flex flex-col min-h-screen"> 
-      <div className="bg-red-500">
+      <div className="bg-gray-900">
         <div className="container mx-auto p-6">
           <Navbar />
           <h2 className="text-2xl font-bold text-center mb-6">Payment</h2>
