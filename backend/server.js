@@ -33,7 +33,7 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/payment", paymentRoutes);
 
 // Serve React frontend for all non-API routes
-const __dirname = __dirname || path.resolve();
+//const __dirname = __dirname || path.resolve();
 
 app.use(express.static(path.join(__dirname, "/frontend/build")));
 
