@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar"; // Import Navbar
 import QuickLinks from "./Quicklinks"; // Import QuickLinks
 import loginImage from "./assets/login.jpg"; // Import image (replace with your image)
+import { back_url } from "../url";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/users/login`, { email, password });
+      const res = await axios.post(``${back_url}/api/users/login`, { email, password });
       localStorage.setItem("user", JSON.stringify(res.data)); // Save user data
       navigate("/"); // Redirect to homepage or cart page
     } catch (error) {
