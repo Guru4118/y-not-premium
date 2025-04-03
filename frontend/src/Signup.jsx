@@ -26,7 +26,7 @@ export default function SignUp() {
       return;
     }
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/users/register`, {
+      const res = await axios.post(`${back_url}/api/users/register`, {
         name: formData.name,
         email: formData.email,
         password: formData.password,
